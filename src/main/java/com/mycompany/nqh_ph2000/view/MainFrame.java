@@ -25,30 +25,30 @@ public class MainFrame extends javax.swing.JFrame {
         defaultTableModel.addColumn("Gioi tinh");
         defaultTableModel.addColumn("Nam sinh");
 
-        // loadTable();
+         loadTable();
         // Jtable
-        for (SinhVien sv : svs) {
-            defaultTableModel.addRow(new Object[]{
-                sv.getMa(),
-                sv.getTen(),
-                sv.isGioiTinh() ? "Nam" : "Nu",
-                sv.getNamSinh()
-            });
-        }
+//        for (SinhVien sv : svs) {
+//            defaultTableModel.addRow(new Object[]{
+//                sv.getMa(),
+//                sv.getTen(),
+//                sv.isGioiTinh() ? "Nam" : "Nu",
+//                sv.getNamSinh()
+//            });
+//        }
 
         // Dua du lieu cuoi cung len form
-        SinhVien svcc = svs.get(svs.size() - 1);
-        jTextField1.setText(svcc.getMa());
-        jTextField2.setText(svcc.getTen());
-        jTextField3.setText(String.valueOf(svcc.getNamSinh()));
-
-        if (!svcc.isGioiTinh()) {
-            jRadioButton2.setSelected(true);
-        }
+//        SinhVien svcc = svs.get(svs.size() - 1);
+//        jTextField1.setText(svcc.getMa());
+//        jTextField2.setText(svcc.getTen());
+//        jTextField3.setText(String.valueOf(svcc.getNamSinh()));
+//
+//        if (!svcc.isGioiTinh()) {
+//            jRadioButton2.setSelected(true);
+//        }
 
         // Selected row
-        ListSelectionModel selectionModel = jTable1.getSelectionModel();
-        selectionModel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
+//        ListSelectionModel selectionModel = jTable1.getSelectionModel();
+//        selectionModel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 
 //        selectionModel.addListSelectionListener(e -> {
 //            int selectedRow = jTable1.getSelectedRow();
@@ -67,16 +67,15 @@ public class MainFrame extends javax.swing.JFrame {
     }
 
     private void loadTable() {
-        defaultTableModel = new DefaultTableModel();
-        jTable1.setModel(defaultTableModel);
+//        defaultTableModel = new DefaultTableModel();
+//        jTable1.setModel(defaultTableModel);
+//
+//        defaultTableModel.addColumn("Ma");
+//        defaultTableModel.addColumn("Ten");
+//        defaultTableModel.addColumn("Gioi tinh");
+//        defaultTableModel.addColumn("Nam sinh");
 
-        defaultTableModel.addColumn("Ma");
-        defaultTableModel.addColumn("Ten");
-        defaultTableModel.addColumn("Gioi tinh");
-        defaultTableModel.addColumn("Nam sinh");
-
-        // loadTable();
-        // Jtable
+        defaultTableModel.setRowCount(0);
         for (SinhVien sv : svs) {
             defaultTableModel.addRow(new Object[]{
                 sv.getMa(),
@@ -85,6 +84,19 @@ public class MainFrame extends javax.swing.JFrame {
                 sv.getNamSinh()
             });
         }
+                // Dua du lieu cuoi cung len form
+        SinhVien svcc = svs.get(svs.size() - 1);
+        jTextField1.setText(svcc.getMa());
+        jTextField2.setText(svcc.getTen());
+        jTextField3.setText(String.valueOf(svcc.getNamSinh()));
+
+        if (!svcc.isGioiTinh()) {
+            jRadioButton2.setSelected(true);
+        }
+
+        // Selected row
+        ListSelectionModel selectionModel = jTable1.getSelectionModel();
+        selectionModel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
     }
 
     /**
@@ -287,7 +299,6 @@ public class MainFrame extends javax.swing.JFrame {
             newSV.setNamSinh(Integer.parseInt(jTextField3.getText()));
 
             svs.set(index, newSV);
-//        defaultTableModel.setRowCount(0);
             loadTable();
         }
     }//GEN-LAST:event_jButton2ActionPerformed
