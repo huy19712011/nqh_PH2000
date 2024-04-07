@@ -1,0 +1,12 @@
+com\mycompany\nqh_ph2000\Nqh_PH2000.class
+com\mycompany\nqh_ph2000\view\MainFrame$1.class
+com\mycompany\nqh_ph2000\view\MainFrame$4.class
+com\mycompany\nqh_ph2000\view\MainFrame.class
+com\mycompany\nqh_ph2000\view\StudentJFrame.class
+com\mycompany\nqh_ph2000\entity\SinhVien.class
+com\mycompany\nqh_ph2000\repository\DatabaseConnectionManager.class
+com\mycompany\nqh_ph2000\view\MainFrame$3.class
+com\mycompany\nqh_ph2000\view\StudentJFrame$1.class
+com\mycompany\nqh_ph2000\view\MainFrame$2.class
+com\mycompany\nqh_ph2000\view\MainFrame$5.class
+com\mycompany\nqh_ph2000\repository\SinhVienRepository.class
